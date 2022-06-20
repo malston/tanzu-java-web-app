@@ -1,7 +1,7 @@
 SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='harbor.markalston.net/tanzu/supply-chain/tanzu-java-web-app-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
-
+allow_k8s_contexts('homelab-admin@homelab')
 k8s_custom_deploy(
     'tanzu-java-web-app',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --live-update" +
