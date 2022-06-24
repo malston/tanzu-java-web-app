@@ -27,7 +27,7 @@ spec:
           appliveview-sample/app-live-view-connector
           appliveview-sample/app-live-view-appflavours
           appliveview-sample/app-live-view-systemproperties
-        developer.apps.tanzu.vmware.com/image-source-digest: e6a51d013bf503c6615315fa024cc12410f15f59
+        developer.apps.tanzu.vmware.com/image-source-digest: 1af1fbc908671a9a3f48ee57d133f0d4baeda661
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
@@ -45,7 +45,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.markalston.net/tanzu/supply-chain/tanzu-java-web-app-default@sha256:99b44abea2e798d74fc4201185f1fb372e42eb06fc33595b72c934e98bbfbf6b
+        image: harbor.markalston.net/tanzu/supply-chain/tanzu-java-web-app-default@sha256:79941e0c2d52b219a40c11f49fd6d604412910a131a949f8bbf363e5ba17d341
         name: workload
         ports:
         - containerPort: 8080
