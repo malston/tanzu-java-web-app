@@ -39,7 +39,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.markalston.net/tanzu/supply-chain/tanzu-java-web-app-default@sha256:ee7c691cd9ce71e3463956052c5bfb5e4bfab8d06faa0628da0f389dc6443b97
+        image: harbor.markalston.net/tanzu/supply-chain/tanzu-java-web-app-default@sha256:d7bb6fe30f92bb705c3ee004b890771b3a260019b1acae83cbffcd9d4b4e9094
         name: workload
         ports:
         - containerPort: 8080
